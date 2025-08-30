@@ -9,10 +9,10 @@ export default function App() {
   // pick random quote
   // Fetch a random quote
   const fetchQuote = async () => {
-    const response = await fetch("https://api.quotable.io/random");
+    const response = await fetch("https://dummyjson.com/quotes/random");
     const data = await response.json();
     setQuote({
-      text: data.content,
+      text: data.quote,
       author: data.author,
     });
   };
