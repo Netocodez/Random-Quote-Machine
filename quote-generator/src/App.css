@@ -1,0 +1,106 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Georgia", serif;
+  transition: background 0.5s ease-in-out;
+}
+
+.date {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3); /* semi-transparent for readability */
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+#quote-box {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+#quote-box:hover {
+  transform: scale(1.02);
+}
+
+#text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+#author {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  color: #777;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button,
+a {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button {
+  background: #4caf50;
+  color: white;
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+button:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+a {
+  background: #1da1f2;
+  color: white;
+  box-shadow: 0 4px 8px rgba(29, 161, 242, 0.3);
+}
+
+a:hover {
+  background: #1991da;
+  transform: translateY(-2px);
+}
+
+.credits {
+  margin-top: 1rem;
+  margin-bottom: -4rem;
+  font-size: 0.8rem;
+  color: #888;
+  text-align: center;
+  font-style: italic;
+}
