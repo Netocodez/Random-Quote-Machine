@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
 html,
 body {
   height: 100%;
@@ -28,14 +30,15 @@ body {
 }
 
 #quote-box {
-  background: #fff;
-  padding: 2.5rem;
-  border-radius: 16px;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  padding: 3rem;
+  border-radius: 20px;
   width: 500px;
-  max-width: 90%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 95%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+  position: relative;
 }
 
 #quote-box:hover {
@@ -43,17 +46,64 @@ body {
 }
 
 #text {
+  /*font-family: "Playfair Display", serif;*/
+  font-family: "Great Vibes", serif;
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1rem;
   line-height: 1.4;
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.quote-icon {
+  font-size: 6rem;
+  vertical-align: top;
+  color: #4CAF50;
+  margin-right: 8px;
 }
 
 #author {
+  font-family: "Raleway", sans-serif;
   font-size: 1.1rem;
   margin-bottom: 2rem;
   font-style: italic;
   color: #777;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.topic-selector {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.topic-selector label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-right: 5px;
+  color: #555;
+}
+
+.topic-selector select {
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.2);
+  background: rgba(255,255,255,0.8);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  appearance: none; /* remove default arrow */
+}
+
+.topic-selector select:hover {
+  border-color: #aaa;
+}
+
+.topic-selector select {
+  background: rgba(255,255,255,0.8) url("data:image/svg+xml;utf8,<svg fill='black' height='10' viewBox='0 0 24 24' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 10px center;
+  background-size: 10px;
+  padding-right: 30px;
 }
 
 .buttons {
@@ -96,9 +146,59 @@ a:hover {
   transform: translateY(-2px);
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+#new-quote {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  gap: 10px;
+}
+
+/* Right side icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+/*
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5px;
+  height: 10px;
+  border-radius: 20%;
+  background: white;
+  transition: transform 0.2s ease;
+  padding: 0.7rem 1.2rem;
+}*/
+.social-icons a {
+  color: none;          /* match your theme */
+  font-size: 1.5rem;    /* adjust icon size */
+  text-decoration: none;
+  background: none;     /* remove background */
+  border: none;         /* remove border */
+  padding: 0;           /* remove spacing */
+  margin: 0;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+
 .credits {
   margin-top: 1rem;
-  margin-bottom: -4rem;
+  margin-bottom: -4.2rem;
   font-size: 0.8rem;
   color: #888;
   text-align: center;
